@@ -1,5 +1,40 @@
-:root {
-  --color-1: #3131b9;
+:root,
+:root.color1 {
+  --theme-color: #3131b9;
+}
+:root.color2 {
+  --theme-color: #F75431;
+}
+:root.color3 {
+  --theme-color: #6A597C;
+}
+:root.color4 {
+  --theme-color: #87150E;
+}
+:root.color5 {
+  --theme-color: #3BAB7E;
+}
+:root.color6 {
+  --theme-color: #E2B51D;
+}
+
+#color1 {
+  background-color: #3131b9;
+}
+#color2 {
+  background-color: #F75431;
+}
+#color3 {
+  background-color: #6A597C;
+}
+#color4 {
+  background-color: #87150E;
+}
+#color5 {
+  background-color: #3BAB7E;
+}
+#color6 {
+  background-color: #E2B51D;
 }
 
 body {
@@ -13,6 +48,132 @@ body {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.menu{
+  padding: 4rem;
+  text-align: start;
+  justify-content: start;
+}
+
+.menu-wrap {
+  position: fixed;
+  z-index: 9999;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background-color: #111;
+  background-position: center center;
+  background-size: cover;
+  font-size: 1.15em;
+  display: table; 
+  transform: translate3d(100%, 0, 0);
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.menu-headings {
+  color: white;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+}
+
+.menu-item{
+  border-radius: 50%;
+  border-style: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  cursor: pointer;
+}
+
+.menu-item:hover{
+  border-style: solid;
+  border-color: white;
+}
+
+.menu-list ul {
+  display: grid;
+  grid-template-columns: 30px 30px 30px; 
+  grid-gap: 3rem 4rem;
+  padding-inline-start: 30px;
+}
+
+.navigation {
+  display: block;
+  position: absolute;
+  top: 30px;
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.close-menu {
+  color: #fff;
+  font-size: 60px;
+  cursor: pointer;
+  line-height: 49px;
+}
+
+.show-menu .menu-wrap { 
+  transform: translate3d(0, 0, 0); 
+  transition: transform 0.8s;
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.main-menu-indicator {
+  display: block;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 1000;
+  height: 62px;
+  width: 25px;
+  background: transparent;
+  outline: 0;
+  float: right;
+  position: relative;
+  margin: 17px 40px 17px 0;
+}
+
+.main-menu-indicator:hover {
+  border: 0;
+  box-shadow: none;
+}
+
+.main-menu-indicator>span {
+  transition: all 0.1s ease 0s;
+  display: block;
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  top: 32px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: #545454;
+}
+.main-menu-indicator>span:before,
+.main-menu-indicator>span:after {
+  transition: all 0.2s ease 0s;
+  position: absolute;
+  content: '';
+  width: 25px;
+  height: 2px;
+  background: #545454;
+  left: 0;
+}
+.main-menu-indicator>span:after {
+  top: -5px;
+}
+.main-menu-indicator>span:before {
+  bottom: -5px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
 }
 
 #navbar ul li {
@@ -106,7 +267,8 @@ hr {
   font-family: 'Lato', sans-serif;
   justify-content: center;
   align-items: center;
-  border: 3px solid var(--color-1);
+  border: 3px solid;
+  border-color: var(--theme-color);
   background-color: black;
 }
 
@@ -130,6 +292,7 @@ hr {
   border-radius: 25px;
   margin: 30px;
   padding: 20px;
+  background-color: var(--theme-color);
 }
 
 .cards::before {
@@ -149,14 +312,6 @@ hr {
   border-radius: 25px;
   border: none;
   z-index: -1;
-}
-
-#card-1 {
-    background-color: rgb(173, 0, 0);
-}
-
-#card-2 {
-  background: linear-gradient(137.81deg, #FF0000 0%, #C90AAA 47.78%, #0B84ED 100%);
 }
 
 .innercard {
@@ -267,7 +422,7 @@ hr {
   }
   
   #logo{
-    margin: 40px 0px 40px 0px;
+    margin: 40px 0px 40px 20px;
     height: auto;
     display: flex;
     justify-content: center;
@@ -277,6 +432,37 @@ hr {
   hr {
     width: 100%;
     left: 0px;
+  }
+
+  .menu{
+    padding: 1rem;
+  }
+
+  .close-menu {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .menu-wrap {
+    width: 20%;
+    height: 100%;
+    font-size: 1rem;
+  }
+
+  .menu-headings {
+    margin-top: 3rem;
+    margin-left: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .menu-list ul {
+    grid-gap: 1rem 1rem;
+    padding-inline-start: 20px;
+  }
+
+  .menu-item{
+    width: 1rem;
+    height: 1rem;
   }
   
   .links {
@@ -330,6 +516,10 @@ hr {
     margin: auto;
     text-align: center;
   }
+
+  .main-menu-indicator {
+    margin: 40px 20px 40px 0;
+  }
 }
 
 @media screen and (max-width: 320px) {
@@ -362,6 +552,7 @@ hr {
   }
 
 }
+
 
 
 

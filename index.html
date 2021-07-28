@@ -10,15 +10,62 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/pe-icon-7-stroke.css">
 
 </head>
 
 <body>
   <nav id="navbar">
-    <div id="logo">
-      <img src="https://ieeeadgitm.com/assests/img/logoieee.png" alt="IEEElogo">
+    <div class="top">
+      <div id="logo">
+        <img src="https://ieeeadgitm.com/assests/img/logoieee.png" alt="IEEElogo">
+      </div>
+  
+      <button class="main-menu-indicator" id="open-button">
+        <span class="line"></span>
+      </button>
     </div>
+  
+    <div class="menu-wrap" id="sidebar">
+      <div class="menu-content">
+          <div class="navigation">
+              <span class="pe-7s-close close-menu" id="close-button"></span>
+              <div class="search-wrap js-ui-search">                        
+                  <span class="js-ui-close"></span>
+              </div>
+          </div>
+          <nav class="menu">
+            <div class="menu-headings">
+              <h2>Settings</h2>
+              <p>Color Theme</p>
+            </div>
+            <div class="menu-list">
+                <ul>
+                  <li class="">
+                    <button class="menu-item" id="color1"></button>
+                  </li>
+                  <li class="">
+                    <button class="menu-item" id="color2"></button>
+                  </li>
+                  <li class="">
+                    <button class="menu-item" id="color3"></button>
+                  </li>
+                  <li class="">
+                    <button class="menu-item" id="color4"></button>
+                  </li>
+                  <li class="">
+                    <button class="menu-item" id="color5"></button>
+                  </li>
+                  <li class="">
+                    <button class="menu-item" id="color6"></button>
+                  </li>
+                </ul>
+            </div>
+        </nav>
+
+      </div>
+    </div>
+
     <ul>
       <li id="link" class="firstpage" onclick="linksFunction()">
         <p id="#links">Links</p>
@@ -150,6 +197,10 @@
   </div>
 
   <script src="index.js" charset="utf-8"></script>
+  <script src="js/jquery-1.11.2.min.js"></script>     
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/classie.js"></script>   
+  <script src="js/main.js"></script>
 </body>
 
 </html>

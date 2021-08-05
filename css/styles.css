@@ -397,6 +397,7 @@ hr {
 }
 .btn i{
   font-size: 2.5rem;  
+  color: #fff;
 }
 
 .cards {
@@ -412,10 +413,11 @@ hr {
   font-size: 0.8rem;
   text-align: center;
   line-height: 1rem;
-  border-radius: 25px;
+  border-radius: 10px;
   margin: 0px 20px;
   padding: 20px;
-  height: 95%;
+  /* height: 95%; */
+  /* background-color: red; */
 }
 
 .cards::before {
@@ -427,7 +429,7 @@ hr {
   width: 100%;
   height: 95%;
   content: "";
-  background: rgba( 0, 0, 0, 0.1);
+  background: rgba( 0, 0, 0, 1);
   backdrop-filter: blur( 100px);
   -webkit-backdrop-filter: blur( 200px);
   opacity: 40%;
@@ -446,6 +448,7 @@ hr {
   width: 100%;
   height: 50px;
   padding: 0px;
+
 }
 
 .innercard::before {
